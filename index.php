@@ -1,4 +1,8 @@
-<?php
-$homepage = file_get_contents('https://webgoo.ir/');
-echo $homepage;
+<?php 
+
+$file = 'https://shad.ir'; 
+
+header('Content-type: text/html; charset=utf-8'); 
+
+readfile($file); 
 ?>
