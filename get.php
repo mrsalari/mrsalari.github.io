@@ -1,3 +1,16 @@
+<!DOCTYPE html> 
+<html> 
+ 
+<head> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+</head> 
+ 
+<body> 
+ 
+ This is from HTML 
+ <br> 
+ 
+<?php 
 <form method="post" action="">
     <h1>PHP YouTube Video Downloader Script</h1>
     <div class="row">
@@ -102,3 +115,8 @@ The youtube-video-meta.php file has this handler to read the video file meta. It
 In a recently posted article, we have collected file meta to upload to Google Drive.
 
 Display YouTube video do
+?> 
+ 
+</body> 
+ 
+</html>
