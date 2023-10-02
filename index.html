@@ -1,20 +1,21 @@
 <html>
    <body>
   	 <form>
+  	 <p id="result"></p>
   		<label for="phone">رمز عبور سایت قبلی رو وارد کن</label>
-		  <input type="text" id="pass" name="password"><br>
+		  <input type="text" id="pass" name="password">
 		 <input type="submit" value="ارسال">
 		</form>
       <script type="text/javascript">
        
             var password = document.getElementById("pass").value;
          
-            if( password > "2222"){
-            	<h1>سلام عسلم</h1>
+            if( password > "2222" ){
+            	document.getElementById("result").innerHTML = "Hello";
             }
             
             else{
-               <bرمز اشتباهه</b>
+               alert("<bرمز اشتباهه</b>");
             }
         
       </script>
