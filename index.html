@@ -1,6 +1,30 @@
-<script>
-  alert("message");
-</script>
+<!DOCTYPE html>
+<html>
 <body>
-  hello
+
+<button onclick="MyMessage();">کلیک کنید</button>
+<h2 id="Result"></h2>
+ 
+<script>
+var limit = 3
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/dadjokes?limit=' + limit,
+    headers: { 'X-Api-Key': 'JuklId/2iAO7zqUXX3gzoQ==XwbWvdQ59SMAyzm4'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
+
+function MyMessage(){
+ document.getElementById("Result").innerHTML = limit;
+}
+
+</script>
+
 </body>
+</html>
