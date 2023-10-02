@@ -1,35 +1,20 @@
 <html>
-<head>
-</head>
+   <body>
+   	<h1>Mr.Salari 3</h1>
+   	<p id="result"></p>
+ 	  <input type="text" id="my-field">
 
-<body>
-
-<script src="jquery-1.11.1.min.js"></script>
-<script>
-$(document).ready(function(){
-    var myButton = $("#buttonID");
-    var myInput = $("#inputID");
-    myButton.click(function(){
-        var inputValue = myInput.val();
-        if( myInput == "setayesh" ){
-               document.getElementById("result").innerHTML = "سلام عشق زندگیم خواستم بگم اون سایت ssl اش تموم شده که درست میشه، و اینکه باورم نمیشه بالاخره یکی تولد منو تبریک گفت😂❤️، خیلی خیلی دوست دارم میمیرم واست، و اینکه به محیط ساده اینجا دقت نکن با گوشی و وقت کمی که داشتم بهتر نمیشد،اگه این پیامو خوندی ایتا بگو بفهمم";
-        }
+	<script>
+    	let value = document.querySelector( '#my-field' ).value;
+    	if( value > "setayesh" ){
+            	document.getElementById("result").innerHTML = "سلام عشقم";
             }
             
             else{
                document.getElementById("result").innerHTML = "رمز اشتباهه";
             }
-      
-    });
-});
+    	alert(value);
 </script>
-<p id="result"></p><br>
-<form>
-<input id="inputID" type="text">
-    <input type="submit" value="ارسال">
-</form>
-
-
-</body>
-
+      
+   </body>
 </html>
