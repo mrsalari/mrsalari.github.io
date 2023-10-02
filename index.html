@@ -1,25 +1,34 @@
 <html>
-   <body>
-  	 <form>
-	<h1>Mr.Salari 3</h1>
-  	 <h1 id="result"></h1><br>
-  		<label for="pass">رمز عبور سایت قبلی رو وارد کن</label>
-		  <input type="text" id="pass" name="pass"><br>
-		 <input type="submit" value="ارسال">
-		</form>
-      <script>
-       
-            var password = $("#pass");
-        
-            if( password == "setayesh" ){
-            	document.getElementById("result").innerHTML = "سلام عشق زندگیم خواستم بگم اون سایت ssl اش تموم شده که درست میشه، و اینکه باورم نمیشه بالاخره یکی تولد منو تبریک گفت😂❤️، خیلی خیلی دوست دارم میمیرم واست، و اینکه به محیط ساده اینجا دقت نکن با گوشی و وقت کمی که داشتم بهتر نمیشد،اگه این پیامو خوندی ایتا بگو بفهمم";
+<head>
+</head>
+
+<body>
+
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    var myButton = $("#buttonID");
+    var myInput = $("#inputID");
+    myButton.click(function(){
+        var inputValue = myInput.val();
+        if( myInput == "setayesh" ){
+               alert("رمز درسته");
             }
             
             else{
-               document.getElementById("result").innerHTML = "رمز اشتباهه";
+               alert("رمز اشتباهه");
             }
-        
-      </script>
       
-   </body>
+    });
+});
+</script>
+
+<form>
+<input id="inputID" type="text">
+</form>
+
+<button id="buttonID" type="button">My Button</button>
+
+</body>
+
 </html>
