@@ -1,20 +1,31 @@
-<html>
-   <body>
-   	<h1>Mr.Salari 4</h1>
-   	<p id="result"></p>
- 	  <input type="text" id="my-field">
 
-	<script>
-    	let value = document.querySelector( '#my-field' ).value;
-    	if( value == "setayesh" ){
-            	document.getElementById("result").innerHTML = "سلام عشقم";
-            }
-            
-            else{
-               document.getElementById("result").innerHTML = "رمز اشتباهه";
-            }
-    	alert(value);
+<html>
+<title>ام اس پی سافت آنچه یک برنامه نویس نیاز دارد </title>
+<body direction="rtl"style="font-family:tahoma">
+
+<form name="loginform" onSubmit="return validateForm();" method="get">
+    <label>نام کاربری:</label>
+    <input type="text" name="usr" placeholder="username"> 
+    <label>کلمه عبور:</label>
+    <input type="password" name="pword" placeholder="password">
+    <input type="submit" value="Login"/>
+</form>
+
+<script>
+    function validateForm() {
+        var un = document.loginform.usr.value;
+        var pw = document.loginform.pword.value;
+       
+        if ((un == "test") && (pw == "test")) {
+			alert ("خوش آمدید به ام اس پی سافت!");
+            return true;
+        }
+        else {
+            alert ("اطلاعات وارد شده صحیح نیست, اطلاعات وارد شده صحیح نیست");
+            return false;
+        }
+  }
 </script>
-      
-   </body>
+
+</body>
 </html>
