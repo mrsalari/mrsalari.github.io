@@ -2,31 +2,18 @@
 <html>
 <body>
 
-<button onclick="MyMessage();">کلیک کنید</button>
-<h2 id="Result"></h2>
+<h1>test 4</h1>
  
 <script>
- <script>
- 
-function MyLoad(){
- const xhttp = new XMLHttpRequest();
- var MyInput = document.getElementById("UserName").value;
- var result = document.getElementById("Result");
- if(MyInput == ""){
-  result.innerHTML = "دیگه اومدی و نسازی، بی زحمت یه چیزی وارد کن";
- }else{
- xhttp.onload = function(){
- result.innerHTML = this.responseText;
- }
- xhttp.open("GET", 'https://api.api-ninjas.com/v1/dadjokes?limit=3', headers: { 'X-Api-Key': 'JuklId/2iAO7zqUXX3gzoQ==XwbWvdQ59SMAyzm4'},);
- xhttp.send();
- alert(xhttp);
-  
- }
-}
- 
-</script>
-
+ $.ajax({
+  url: 'https://api.api-ninjas.com/v1/dadjokes?limit=3',
+  type: "GET",
+  headers: { 'X-Api-Key': 'JuklId/2iAO7zqUXX3gzoQ==XwbWvdQ59SMAyzm4'},
+  success: function (data) {
+    console.log(data);
+    alert(data);
+  }
+});
 </script>
 
 </body>
