@@ -6,23 +6,26 @@
 <h2 id="Result"></h2>
  
 <script>
-var limit = 3
-$.ajax({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/dadjokes?limit=' + limit,
-    headers: { 'X-Api-Key': 'JuklId/2iAO7zqUXX3gzoQ==XwbWvdQ59SMAyzm4'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
-
-function MyMessage(){
- document.getElementById("Result").innerHTML = limit;
+ <script>
+ 
+function MyLoad(){
+ const xhttp = new XMLHttpRequest();
+ var MyInput = document.getElementById("UserName").value;
+ var result = document.getElementById("Result");
+ if(MyInput == ""){
+  result.innerHTML = "دیگه اومدی و نسازی، بی زحمت یه چیزی وارد کن";
+ }else{
+ xhttp.onload = function(){
+ result.innerHTML = this.responseText;
+ }
+ xhttp.open("GET", 'https://api.api-ninjas.com/v1/dadjokes?limit=3', headers: { 'X-Api-Key': 'JuklId/2iAO7zqUXX3gzoQ==XwbWvdQ59SMAyzm4'},);
+ xhttp.send();
+ alert(xhttp);
+  
+ }
 }
+ 
+</script>
 
 </script>
 
