@@ -1,14 +1,14 @@
 <html>
    <body>
-   	<h1>Mr.Salari 3</h1>
+   	<h1>Mr.Salari 4</h1>
 
 	<script>
     	var formData = new FormData();
 		formData.append("chat_id" : "915303220", "text" : "hello");
 		var req = new XMLHttpRequest();
 		req.open("POST", "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage");
-		var se = req.send(formData);
-		alert(se);
+		
+		alert(req.send(formData););
 	</script>
       
    </body>
