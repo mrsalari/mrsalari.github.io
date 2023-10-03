@@ -1,15 +1,29 @@
+<!DOCTYPE html>
+ 
 <html>
-   <body>
-   	<h1>Mr.Salari 4</h1>
-
-	<script>
-    	var formData = new FormData();
-		formData.append("chat_id" : "915303220", "text" : "hello");
-		var req = new XMLHttpRequest();
-		req.open("POST", "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage");
-		
-		alert(req.send(formData););
-	</script>
-      
-   </body>
+ 
+<body>
+ 
+ 
+ 
+<p id="user"></p>
+ 
+ 
+ 
+<script>
+ 
+var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
+ 
+var obj = JSON.parse(s);
+ 
+ 
+ 
+document.getElementById("user").innerHTML =obj;
+ 
+</script>
+ 
+ 
+ 
+</body>
+ 
 </html>
