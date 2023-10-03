@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font: 14px Verdana, Tahoma, Arial, sans-serif;
+    background: #ffffff;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #3d79b0;
+    background: -moz-linear-gradient(top, #5096c8 0, #3d79b0 215px, #f8f8f8 215px, #fefefe 250px, #ffffff 250px);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, #5096c8), color-stop(215px, #3d79b0), color-stop(215px, #f8f8f8), color-stop(250px, #fefefe), color-stop(250px, #ffffff));
+    background: -webkit-linear-gradient(top, #5096c8 0, #3d79b0 215px, #f8f8f8 215px, #fefefe 250px, #ffffff 250px);
+    background: -o-linear-gradient(top, #5096c8 0, #3d79b0 215px, #f8f8f8 215px, #fefefe 250px, #ffffff 250px);
+    background: -ms-linear-gradient(top, #5096c8 0, #3d79b0 215px, #f8f8f8 215px, #fefefe 250px, #ffffff 250px);
+    background: linear-gradient(to bottom, #5096c8 0, #3d79b0 215px, #f8f8f8 215px, #fefefe 250px, #ffffff 250px);
+    height: 250px;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    outline: 0;
+}
+
+h1 {
+    font: bold 30px 'Myriad Pro', Helvetica, Trebuchet MS;
+    letter-spacing: -2px;
+    color: #ffffff;
+    text-shadow: #326996 1px 1px 0;
+    padding: 18px 0 10px 0;
+}
+
+*+html h1 {
+    color: #3d79b0;
+}
+
+h1 img {
+    vertical-align: middle;
+    margin: -6px 3px 0 0;
+}
+
+*+html h1 img {
+    position: relative;
+    top: 3px;
+}
+
+#wrapper {
+    width: 760px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+#shoutbox-box-wrapper {
+    background-color: #ffffff;
+    color: #505050;
+    border: 1px solid #f0f0f0;
+    padding: 8px;
+    height: 306px;
+    -webkit-border-radius: 0 0 9px 9px;
+    -moz-border-radius: 0 0 9px 9px;
+    border-radius: 0 0 9px 9px;
+    -webkit-box-shadow: 0 0 4px 0 #e4e4e4;
+    -moz-box-shadow: 0 0 4px 0 #e4e4e4;
+    box-shadow: 0 0 4px 0 #e4e4e4;
+}
+
+#shoutbox-box-login-wrapper {
+    text-align: center;
+}
+
+#shoutbox-box-inner {
+    text-align: left;
+}
+
+#shoutbox-box {
+    background-color: #fbfbfb;
+    border: 1px solid #dadada;
+    height: 250px;
+    margin-bottom: 5px;
+    overflow: auto;
+}
+
+#shoutbox-box a {
+    color: #777777;
+    border-bottom: 1px dotted #777777;
+}
+
+#shoutbox-box a:hover {
+    color: #333333;
+    border-bottom: 1px solid #333333;
+}
+
+#shoutbox-box div {
+    line-height: 17px;
+    font-size: 12px;
+    padding: 0 3px;
+    background-color: #fbfbfb;
+}
+
+#shoutbox-box div.odd {
+    background-color: #f4f4f4;
+}
+
+#shoutbox-box div.bot {
+    font-style: italic;
+}
+
+#shoutbox-box div.bot span.time {
+    font-style: normal;
+}
+
+#shoutbox-box div.bot span.name {
+    color: #468cbe;
+}
+
+#shoutbox-box span.time {
+    font-size: 10px;
+}
+
+#shoutbox-box span.name {
+    font-weight: bold;
+}
+
+#shoutbox-box span.message {
+    font-size: 12px;
+}
+
+#shoutbox-box span.message img {
+    margin-bottom: -4px;
+}
+
+#shoutbox-box-inner {
+    opacity: 0;
+}
+
+#shoutbox-loader {
+    display: none;
+    margin-top: 136px;
+}
+
+#shoutbox-enter-name {
+    margin-top: 106px;
+    text-align: center;
+}
+
+#shoutbox-name {
+    color: #444444;
+    background: #fdfdfd;
+    border: 1px solid #dadada;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 2px;
+    margin-top: 6px;
+    font-size: 18px;
+    width: 260px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 5px 5px -5px rgba(200, 200, 200, 0.5) inset;
+    -moz-box-shadow: 0 5px 5px -5px rgba(200, 200, 200, 0.5) inset;
+    box-shadow: 0 5px 5px -5px rgba(200, 200, 200, 0.5) inset;
+}
+
+#shoutbox-name-submit {
+    color: #ffffff;
+    background: #5096c8;
+    background: -moz-linear-gradient(top, #5096c8 0%, #3d79b0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5096c8), color-stop(100%, #3d79b0));
+    background: -webkit-linear-gradient(top, #5096c8 0%, #3d79b0 100%);
+    background: -o-linear-gradient(top, #5096c8 0%,#3d79b0 100%);
+    background: -ms-linear-gradient(top, #5096c8 0%,#3d79b0 100%);
+    background: linear-gradient(to bottom, #5096c8 0%, #3d79b0 100%);
+    border: 1px solid #30608c;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: 8px;
+    width: 264px;
+    font: bold 15px Arial, sans-serif;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#shoutbox-name:hover,
+#shoutbox-name:focus {
+    border: 1px solid #c3c3c3;
+    background-color: #ffffff;
+}
+
+#shoutbox-message {
+    color: #444444;
+    background: #fdfdfd;
+    border: 1px solid #dadada;
+    vertical-align: middle;
+    padding: 3px 4px;
+    width: 657px;
+    height: 41px;
+    -webkit-border-radius: 0 0 0 9px;
+    -moz-border-radius: 0 0 0 9px;
+    border-radius: 0 0 0 9px;
+    -webkit-box-shadow: 0 5px 5px -5px rgba(200, 200, 200, 0.5) inset;
+    -moz-box-shadow: 0 5px 5px -5px rgba(200, 200, 200, 0.5) inset;
+    box-shadow: 0 5px 5px -5px rgba(200, 200, 200, 0.5) inset;
+    resize: none;
+}
+
+#shoutbox-message:hover,
+#shoutbox-message:focus {
+    border: 1px solid #c3c3c3;
+    background-color: #ffffff;
+}
+
+#shoutbox-submit {
+    border: 1px solid #dadada;
+    color: #555555;
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #fefefe 0%, #f8f8f8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #f8f8f8));
+    background: -webkit-linear-gradient(top, #fefefe 0%, #f8f8f8 100%);
+    background: -o-linear-gradient(top, #fefefe 0%, #f8f8f8 100%);
+    background: -ms-linear-gradient(top, #fefefe 0%, #f8f8f8 100%);
+    background: linear-gradient(to bottom, #fefefe 0%, #f8f8f8 100%);
+    width: 70px;
+    height: 49px;
+    font: bold 13px Verdana, Arial, sans-serif;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-border-radius: 0 0 9px 0;
+    -moz-border-radius: 0 0 9px 0;
+    border-radius: 0 0 9px 0;
+}
+
+#shoutbox-submit:hover,
+#shoutbox-submit:focus {
+    border: 1px solid #cccccc;
+    color: #888888;
+}
+
+#shoutbox-message.rounded {
+    -webkit-border-radius: 0 0 0 9px;
+    -moz-border-radius: 0 0 0 9px;
+    border-radius: 0 0 0 9px;
+}
+
+#shoutbox-message-counter {
+    position: absolute;
+    right: 82px;
+    bottom: -1px;
+    width: 220px;
+    text-align: right;
+    font: bold 32px Verdana, Arial, sans-serif;
+    opacity: 0.07;
+	filter: alpha(opacity=07);
+    clip: rect(0px 217px 27px 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

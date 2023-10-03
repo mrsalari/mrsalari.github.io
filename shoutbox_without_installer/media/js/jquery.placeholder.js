@@ -1,0 +1,1 @@
+(function(e){e.fn.placeholder=function(t){return this.each(function(){if(this.type!="text"&&this.type!="textarea"){return}if(this.value==""){this.value=t}e(this).on("focus",function(){if(this.value==t||this.value==""||this.value=="\n"){this.value=""}}).on("blur",function(){if(this.value==t||this.value==""){this.value=t}})})}})(jQuery);
