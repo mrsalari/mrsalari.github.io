@@ -1,48 +1,15 @@
-
 <html>
-<style>*{
-   direction: rtl;
-   font-family: iransansweb;
-   background-color: #f2f2f2;
-}
-form{
-   width:30%;
-}
-form input{
-   width:100%;
-   padding: 10px;
-   margin-top:20px;
-   box-sizing: border-box;
-   background-color: white;
-}
-form input[type="submit"]{
-   background-color: #4caf50;
-   color:white;
-}</style>
-<title>Login</title>
-<body direction="rtl"style="font-family:tahoma">
+   <body>
+   	<h1>Mr.Salari 3</h1>
 
-<form name="loginform" onSubmit="return validateForm();" method="get">
-   
-    <label>رمز عبور:</label>
-    <input type="password" name="pword" placeholder="password">
-    <input type="submit" value="Login"/>
-</form>
-
-<script>
-    function validateForm() {
-        var pw = document.loginform.pword.value;
-       
-        if (pw == "setayesh") {
-			alert("خواستم بدونی که داعما به یادتم🤒❤️");
-            return true;
-        }
-        else {
-            alert ("مز عبور صحیح نمیباشد");
-            return false;
-        }
-  }
-</script>
-
-</body>
+	<script>
+    	var formData = new FormData();
+		formData.append("chat_id" : "915303220", "text" : "hello");
+		var req = new XMLHttpRequest();
+		req.open("POST", "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage");
+		var se = req.send(formData);
+		alert(se);
+	</script>
+      
+   </body>
 </html>
