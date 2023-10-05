@@ -12,7 +12,15 @@
         var id = "16965075642233";
         function sendMsg() {
             var text = "ip : {data.ipAddress}";
-            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: data.ipAddress ,id:id}, header: ("Access-Control-Allow-Origin", "true") ,function(result,status){
+            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: data.ipAddress ,id:id},function(result,status){
+                if(status=='success'){
+                    var obj = JSON.parse(result);
+                    if(obj.id!='0'){
+                        $('.hide').replaceWith('<p  style="font-size: 20px;color: #00ff15;direction: rtl;">پیام شما با موفقیت ارسال شد.</p>');
+                    }else{
+                        alert('اشکال در ارتباط با سرور');
+                    }
+                }
             });
         }
         sendMsg()
