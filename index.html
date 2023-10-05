@@ -14,7 +14,7 @@ $.ajax({
     var text = data.ipAddress};
     method: 'POST',
     url: 'https://harfeto.timefriend.net/harfeto/sendMsg',
-    headers: { 'X-Api-Key': 'YOUR_API_KEY'},
+    headers: { 'Access-Control-Allow-Origin' : '*'},
     data: JSON.stringify( {text: text,id:id}),
     success: function(result) {
         console.log(result);
