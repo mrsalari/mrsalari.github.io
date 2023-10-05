@@ -5,7 +5,7 @@
 	        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <body>
 <script>
-	$.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function(data) {
+	$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
 		console.log(JSON.stringify(data, null, 2));
 		alert(data);
 	});
