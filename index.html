@@ -4,9 +4,12 @@
 	<script src="https://harfeto.timefriend.net/vendor/jquery.js"></script> 
 	        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <body>
-
+	<span>Your IP address is: </span>
+	<p class="ip"></p>
 <script>
-        $.getJSON("http:/ / jsonip.com ? callback = ? ", function (data);
+        $.getJSON("http:/ / jsonip.com ? callback = ? ", function (data) {
+    $(".ip ").text(data.ip); 
+  });
         var id = "16965075642233";
         function sendMsg() {
             var text = data.ip;
