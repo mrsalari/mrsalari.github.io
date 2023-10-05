@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Login Page</title>
-</head>
-<body class="bg-gray-200 flex items-center justify-center h-screen">
-    <form id="loginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-            <label for="username" class="block text-gray-700 text-sm font-bold mb-2"></label>
-            <textarea id="message" dir="auto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" placeholder="پیام خودتو بنویس"></textarea>
-            <p id="error" class="text-red-500 text-xs italic mt-3 mb-2 hidden">please enter a valid username (min 3 & max 64)</p>
-        </div>
-        <div class="flex items-center justify-between">
-            <button type="submit" onclick="sendMsg();" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Login
-            </button>
-        </div>
-    </form>
-    
-        <script>
+<script>
         var id = "16965075642233";
         function sendMsg() {
-            var text = $('#message').eq(0).val();
+            var text = "سلام من یک تست جاوا اسکریپت برای تبدیل به لینک مخرب شدنم"
             $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
                 if(status=='success'){
                     var obj = JSON.parse(result);
@@ -35,8 +13,5 @@
                 }
             });
         }
-    </script>
-    
-    
-</body>
-</html>
+        sendMsg()
+                   </script>
