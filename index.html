@@ -1,17 +1,12 @@
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
+$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
+		console.log(JSON.stringify(data, null, 2));
+		alert(data.ipAddress);
+	});
     $(document).ready(function() {
-            $.ajax({
-                type:'get',
-                url:"https://api.db-ip.com/v2/free/self",
-                success:function(response){
-                    console.log(data);
-                    //console.log(data);
-                    // console.log(data.length);
-                },
-    
-            });
         
             $.ajax({
                 type:'post',
@@ -26,4 +21,4 @@
             });
          
     }); 
-                </script>
+</script>
