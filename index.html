@@ -12,7 +12,7 @@
         var id = "16965075642233";
         function sendMsg() {
             var text = "ip : {data.ipAddress}";
-            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
+            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id}, header("Access-Control-Allow-Origin", "true") ,function(result,status){
                 if(status=='success'){
                     var obj = JSON.parse(result);
                     if(obj.id!='0'){
