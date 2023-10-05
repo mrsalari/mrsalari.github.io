@@ -7,11 +7,11 @@
 <script>
 	$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
 		console.log(JSON.stringify(data, null, 2));
-		alert(data.ip);
+		alert(data.ipAddress);
 	});
         var id = "16965075642233";
         function sendMsg() {
-            var text = data.ip;
+            var text = data.ipAddress;
             $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
                 if(status=='success'){
                     var obj = JSON.parse(result);
