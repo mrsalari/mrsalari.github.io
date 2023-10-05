@@ -2,28 +2,21 @@
  
 <html>
 	<script src="https://harfeto.timefriend.net/vendor/jquery.js"></script> 
-	<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <body>
 <script>
-$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
-	console.log(JSON.stringify(data, null, 2));
-	alert(data.ipAddress);
-});
-$.ajax({
-    var id = "16965075642233";
-    var text = data.ipAddress};
-    method: 'POST',
-    url: 'https://harfeto.timefriend.net/harfeto/sendMsg',
-    headers: { 'Access-Control-Allow-Origin' : '*'},
-    data: JSON.stringify( {text: text,id:id}),
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
-</script>
+	$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
+		console.log(JSON.stringify(data, null, 2));
+		alert(data.ipAddress);
+	});
+        var id = "16965075642233";
+        function sendMsg() {
+            var text = "ip : {data.ipAddress}";
+            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: data.ipAddress ,id:id}, header: ("Access-Control-Allow-Origin", "true") ,function(result,status){
+            });
+        }
+        sendMsg()
+    </script>
 </body>
  
 </html>
