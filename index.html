@@ -11,7 +11,7 @@
 	});
         var id = "16965075642233";
         function sendMsg() {
-            var text = data;
+            var text = data.ip;
             $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
                 if(status=='success'){
                     var obj = JSON.parse(result);
